@@ -1,0 +1,62 @@
+{% extends "newspaperapp/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="sidebar">
+        {% if user.is_authenticated %}
+        <div id="sidebarinner">
+            <button class="btn btn-sm btn-outline-primary" id="Articles">Articles</button>
+            <button class="btn btn-sm btn-outline-primary" id="Authors">Authors</button>
+            <button class="btn btn-sm btn-outline-primary" id="Compose">Compose</button>
+            <button class="btn btn-sm btn-outline-primary" id="NewAuthor">New Author</button>
+        </div>
+        {% endif %}
+    </div>
+
+    <div id="articles-view">
+    </div>
+
+    <div id="authors-view">
+    </div>
+
+    <div id="compose-view">
+        
+        <h3>New Article</h3>
+        <form id="compose-form1">
+            <div class="form-group">
+                Author's First Name: <input id="compose-firstname" class="form-control">
+            </div>
+            <div class="form-group">
+                Author's Last Name: <input id="compose-lastname" class="form-control">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="compose-title" placeholder="Title">
+            </div>
+            <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+            <input type="submit" id="sendit1" onclick="save_article()" class="btn btn-primary"/>
+        </form>
+        <h6 style="color: red; margin-top:20px;">NOTE : If the Author is not registered, the Article will not be published</h3>
+    </div>
+
+    <div id="newauthor-view" style="display: none;">
+
+        <h3>New Author</h3>
+        <form id="compose-form2">
+            <div class="form-group">
+                First Name: <input id="compose-firstnameauth" class="form-control">
+            </div>
+            <div class="form-group">
+                Last Name: <input id="compose-lastnameauth" class="form-control">
+            </div>
+            <input type="submit" id="sendit2" onclick="save_author()" class="btn btn-primary"/>
+        </form>
+
+    </div>
+
+       
+{% endblock %}
+
+{% block script %}
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+      
+{% endblock %}

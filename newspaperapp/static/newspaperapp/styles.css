@@ -1,0 +1,109 @@
+
+
+
+#searchbar{
+    width:50%;
+    height: fit-content;
+    
+}
+
+#navbar{
+    padding: 20px;
+    width:100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row; 
+    background-image:linear-gradient(to bottom right,  seashell, rgb(205, 204, 201) 40%, seashell);
+}
+
+#innerbody{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+#searchb{
+    margin-top: 20px;
+    margin-left: 10px;
+    width:40%;
+    min-width: 150px;
+    padding: 5px;
+    position: static;
+
+}
+
+#searchbut{
+    margin-top: 20px;
+    margin-left: 10px;
+    position: absolute;
+    
+}
+
+#compose-view{
+    margin-top: 20px;
+    background-color: rgb(172, 238, 238);
+    height: 450px;
+    width: 650px;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+#container{
+    
+    position: static;
+    width: 1000px;
+    margin-top: 30px;
+    right: 100px;
+    margin-left: 300px;
+       
+}
+
+.container{
+    border-radius: 5%;
+    background-image:linear-gradient(to bottom right,  seashell, rgb(205, 204, 201) 40%, seashell);
+
+}
+
+#sidebar{
+    
+    width: 650px;
+    margin-left: 150px;
+    margin-top: 30px;
+
+}
+
+#newauthor-view{
+    margin-top: 20px;
+    background-color: rgb(172, 238, 238);
+    height: 450px;
+    width: 650px;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+#sendit1{
+    margin-top: 10px;
+}
+#sendit2{
+    margin-top: 10px;
+}
+
+#user{
+    margin-left: 450px;
+    float: left;
+}
+
+#logoutbutton{
+    margin-left: 20px;
+}
+
+.button{
+    border-radius: 5%;
+}
+
+#webtitle{
+    font-family: Apple Chancery, cursive;
+    font-size: 65px;
+    width: 250px;
+}
